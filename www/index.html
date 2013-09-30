@@ -27,7 +27,12 @@
     </head>
     <body>
         <div class="app">
-            <h1>Apache Cordova</h1>
+				<button onclick="capturePhoto();">Capture Photo</button> <br>
+    			<button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+    			<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+    			<button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+    			<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+    			<img style="display:none;" id="largeImage" src="" />
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
@@ -39,4 +44,5 @@
             app.initialize();
         </script>
     </body>
+
 </html>
